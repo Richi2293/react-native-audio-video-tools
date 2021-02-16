@@ -155,14 +155,14 @@ export default class Media {
             try {
                 // Since we used "-v error", a work around is to call first this command before the following
                 const result = await RNFFprobe.execute(GetAnotherMediaInfoCommand);
-                if (result.rc !== 0) {
+                if (result !== 0) {
                     throw new Error("Failed to execute command");
                 }
 
                 // get the output result of the command
                 // example of output {"programs": [], "streams": [{"width": 640,"height": 360}], "format": {"size": "15804433"}}
                 let mediaInfo = await RNFFmpegConfig.getLastCommandOutput();
-                mediaInfo = JSON.parse(mediaInfo.lastCommandOutput);
+                mediaInfo = JSON.parse(mediaInfo);
 
                 // execute second command
                 const mediaInformation = await RNFFprobe.getMediaInformation(this.mediaFullPath);
@@ -176,6 +176,7 @@ export default class Media {
                     mediaInformation['width'] = Number(mediaInfo.streams[0].width);
                     mediaInformation['height'] = Number(mediaInfo.streams[0].height);
                 }
+                mediaInformation['path'] = this.mediaFullPath;
 
                 // update mediaDetails
                 this.mediaDetails = mediaInformation;
