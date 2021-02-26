@@ -177,6 +177,8 @@ export default class Media {
                     mediaInformation['height'] = Number(mediaInfo.streams[0].height);
                 }
                 mediaInformation['path'] = this.mediaFullPath;
+                var mediaProperties = mediaInformation.getMediaProperties();
+                mediaInformation['duration'] = mediaProperties.duration;
 
                 // update mediaDetails
                 this.mediaDetails = mediaInformation;
