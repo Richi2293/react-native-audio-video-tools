@@ -37,7 +37,7 @@
   },
   "homepage": "https://github.com/PatrissolJuns/react-native-audio-video-tools#readme",
   "dependencies": {
-    "react-native-ffmpeg": "^0.4.4"
+    "react-native-ffmpeg": "0.5.1"
   },
   "peerDependencies": {
     "react-native": "^0.41.2"

@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         color: '#ffffff',
         fontWeight: 'bold',
-        fontFamily: 'roboto'
+        // fontFamily: 'roboto'
     }
 });
 

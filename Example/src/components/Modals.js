@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
         padding: 10,
     },
     progressModalText: {
-        fontFamily: 'roboto',
+        // fontFamily: 'roboto',
         fontSize: 18,
         textAlign: 'center',
         justifyContent: 'center',
@@ -154,7 +154,7 @@ const styles = StyleSheet.create({
         backgroundColor: COLORS["Summer Sky"],
     },
     modalTitle: {
-        fontFamily: 'roboto',
+        // fontFamily: 'roboto',
         fontSize: 18,
         textAlign: 'center',
         color: COLORS.White
